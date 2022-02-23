@@ -7,8 +7,11 @@
  * trimProperties({ name: '  jane  ' }) // returns a new object { name: 'jane' }
  */
 function trimProperties(obj) {
-  // ✨ implement
-}
+  Object.keys(obj).map(k => {
+    return obj[k] = obj[k].trim();
+  });
+  return obj;
+};
 
 /**
  * [Exercise 2] trimPropertiesMutation trims in place the properties of an object
